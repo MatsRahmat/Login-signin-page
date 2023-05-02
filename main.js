@@ -25,6 +25,7 @@ let temEmail = email.includes('@') && email.includes(".com")
     }else{
         warnMsg.innerHTML = ''
         console.log(`anda terdaftar ${[nama, password, email]}`);
+        suscesSignin()
     }
     
 }
@@ -55,6 +56,13 @@ function suscesLogin() {
 
 function failedLogin() {
     loginMsg.innerHTML = 'Gagal masuk'
+    modal.classList.toggle('hidden')
+    overlayModal.classList.add('overlay-active')
+    closeModal()
+}
+
+function suscesSignin() {
+    loginMsg.innerHTML = 'Berhasil terdaftar'
     modal.classList.toggle('hidden')
     overlayModal.classList.add('overlay-active')
     closeModal()
