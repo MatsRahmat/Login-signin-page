@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Login form">
+    <meta name="keywords" content="login, lakubaju.com, baju anak">
+    <meta name="author" content="RH Mats">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,23 +19,53 @@
 <body>
     <container>
         <div class="box-center">
-            <h2>Login</h2>
-            <div style="border-bottom: 1px solid black;"></div>
-            <form action="">
-                <label for="username">Name</label><br>
-                <input type="text" name="username" placeholder="ujang dadap" id="username"><br>
-                <label for="password">Password</label><br>
-                <input type="password" name="password" placeholder="*******" id="password"><br>
-                <label for="email">Email</label><br> 
-                <input type="email" name="email" id="email" placeholder="@email">
-            </form>
-            <p style="text-align: center; color: red;" id="warn">aku sayang kamu</p>
-            <button id="loginBtn">Login</button>
-            <div class="saran">
-                <p style="font-size: 1.2em; margin: 8px; font-family: 'Josefin Sans', sans-serif;">Belum punya akun?</p>
-                <button id="signUp">Buat Akun</button>
+            <div id="signinForm" class="">
+                <h2>Signin || Daftar</h2>
+                <div style="border-bottom: 1px solid black;"></div>
+                <form action="" id="signin" name="formSignin">
+                    <label for="username">Name</label><br>
+                    <input type="text" name="username" placeholder="ujang dadap" id="nameSignin"><br>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" placeholder="*******" id="passSignin"><br>
+                    <label for="password"> Repeat Password</label><br>
+                    <input type="password" name="repeatPassword" placeholder="*******" id="repeatPassword"><br>
+                    <label for="email">Email</label><br> 
+                    <input type="email" name="email" id="email" placeholder="@email">
+                </form>
+                <p style="text-align: center; color: red;" class="warn"></p>
+                <button id="signinBtn" type="submit" class="btn1" onclick="validate()">Daftar</button>
+                <div class="saran">
+                    <p style="font-size: 1.2em; margin: 8px; font-family: 'Josefin Sans', sans-serif;">Sudah punya akun?</p>
+                    <button class="saranBtn" onclick="switcEl()">LOGIN</button>
+                </div>
+            </div>
+            <div id="loginForm" class="hidden">
+                <h2>Login || Masuk</h2>
+                <div style="border-bottom: 1px solid black;"></div>
+                <form action="" id="login">
+                    <label for="username">Name</label><br>
+                    <input type="text" name="username" placeholder="ujang dadap" id="nameLogin"><br>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" placeholder="*******" id="passlogin"><br>
+                </form>
+                <p style="text-align: center; color: red;" class="warn"></p>
+                <button id="loginBtn" type="submit" class="btn1" onclick="login()">Masuk</button>
+                <div class="saran">
+                    <p style="font-size: 1.2em; margin: 8px; font-family: 'Josefin Sans', sans-serif;">Belum punya akun?</p>
+                    <button class="saranBtn" onclick="switcEl()">SIGNIN</button>
+                </div>
             </div>
         </div>
     </container>
+    <div id="alert" class="hidden">
+        <div class="paren-alert"">
+            <h2 style="font-size: 2em;" id="loginMsg"></h2>
+        </div>
+        <img src="">
+    </div>
+    <div data-modal="modal-section" class="modal_body">
+        <div class="overlay "></div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
