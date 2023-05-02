@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@500&display=swap');
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('media/people-collaborating-online.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+}
+h2{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+form{
+    margin: 5px;
+}
+
+.box-center{
+    width: 21em;
+    max-width: 27em;
+    aspect-ratio: 1/1 ;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1em;
+    background: #FFF;
+}
+input{
+    
+    margin:.5em;
+    width: 20em;
+    height: 2em;
+    border-radius: 5px;
+}
+label{
+    font-size: 1.2em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#loginBtn{
+    outline: none;
+    margin:0;
+    background-color: #22e;
+    padding: .9em;
+    font-family: 'Lexend Exa', sans-serif;
+    font-size: 1em;
+    
+}
+#loginBtn:hover{
+    box-shadow: .2em .5em .5em gray;
+    translate: 1px 1px;
+}
+
+#loginBtn:active{
+    box-shadow: .2em .1em .5em gray;
+    translate: -1px -1px;
+}
+
+.saran{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#signUp{
+    width: 100%;
+    background-color: rgba(74, 224, 19, 0.563);
+    outline: none;
+    padding: .9em;
+    font-size: 1em;
+    font-family: 'Lexend Exa', sans-serif;
+    margin: 0;
+    border-radius: 1em;
+}
+
+
